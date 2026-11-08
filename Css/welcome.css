@@ -1,0 +1,218 @@
+@import url(tokens.css);
+
+html, body { min-height: 100%; }
+html{
+    background: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--colorBackgroundDefault);
+  overflow-x: clip;
+}
+
+.tcIntro { 
+    justify-self: start; 
+    width: fit-content; 
+    position: relative; 
+}
+
+.tcIntro::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -100vh -100vw 0 -100vw;   
+  background: linear-gradient(
+    to top,
+    var(--colorHeroEnd) 0,
+    var(--colorHeroStart) 600px
+  );
+}
+
+.tcWelComeScene {
+  margin-inline: auto;
+  margin-bottom: calc(var(--sceneSize) * -0.294);   
+}
+
+.tcButton{
+    gap: var(--space2);
+    min-height: var(--sizeButton);
+    border-radius: var(--borderRadiusMedium);
+    border: none;
+    padding-inline: var(--space2);
+    font: inherit;
+    line-height: 1;
+            
+}
+.tcWelcomeHeader{
+    margin-top: 20px;
+    margin-left: 24px;
+}
+
+main.tcWelcomePage{
+    display: grid;
+    grid-template-columns: 1fr minmax(400px,460px);
+    column-gap: 40px;
+    align-items: start;
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-top: 100px;
+
+    h1{
+        font-family: var(--fontFamilyDisplay);
+        font-size: var(--fontSizeH1);
+        color: var(--colorTextInverse);
+        line-height: 68px;
+        margin-bottom: 48px;
+
+    }
+
+    p:nth-of-type(3){
+        font-family: var(--fontFamilyDisplay);
+        font-size: var(--fontSize2);
+        color: var(--colorTextInverse);
+        line-height: 28px;
+        margin-top: 44px;
+
+    }
+
+    .tcWelcomeText{
+        font-family: var(--fontFamilyBody);
+        font-size: var(--fontSize2);
+        line-height: 30px;
+        color: var(--colorTextInverse);
+        margin-bottom:12px ;
+        a{
+            color: var(--colorTextInverse);
+        }
+    }
+
+    .tcWelComeScene{
+        position: relative;
+        width: var(--sceneSize);
+        aspect-ratio: 1;                 
+        margin-inline: auto;             
+        border-radius: 50%;
+        background:
+            linear-gradient(to bottom, var(--colorSceneSky) 20%, var(--colorSceneSkyFade) 100%)
+            top / 100% 70.6% no-repeat,
+            linear-gradient(var(--colorSceneSand), var(--colorSceneSand))
+            bottom / 100% 29.4% no-repeat;
+
+            img {
+                position: absolute;
+                display: block;
+                height: auto;
+            }
+
+            .tcTreeImage {
+                bottom: 29.4%;      
+                width: 50%;
+                }
+
+            .tcTurtleImage {
+                left: 59%;
+                bottom: 26%;        
+                width: 47%;        
+            }
+    }
+
+    .tcCard{
+        background-color: var(--colorBackgroundDefault);
+        padding: 48px 40px 40px;
+        margin-top: 28px;
+        border-radius: var(--borderRadiusLarge);
+        font-family: var(--fontFamilyBody);
+        box-shadow: var(--shadowCard);
+
+        h2{
+            margin-bottom: 42px;
+            font-weight: normal;
+            margin-top: 0;
+        }
+
+       .tcSocialSignIn{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            button{
+                width: max-content;
+                display: inline-flex;
+                align-items: center;  
+               
+            }
+
+            button:nth-of-type(2){
+                float: right;
+            }
+       }
+
+       .tcDivider {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;   
+            align-items: center;
+            gap: var(--space2);                    
+            margin-block: var(--space4);           
+            color: var(--colorTextDefault);
+            text-transform: uppercase;
+            font-size: var(--fontSizeBody);
+            line-height: 1;
+        }
+
+        .tcDivider::before,
+        .tcDivider::after {
+            content: "";
+            border-top: 1px solid var(--colorBorder);   
+        }
+
+        form{
+            margin-bottom: var(--space6);
+            .tcField{
+                input{
+                    width: 100%;
+                    line-height: var(--space5);
+                    border-radius: var(--borderRadiusMedium);
+                    border: var(--inputBorder);
+                    margin-top: var(--space1);
+                    margin-bottom: var(--space3);
+                }
+            }
+
+            .btnSignIn{
+                background-color: var(--colorThemePrimary);
+                color: var(--colorTextInverse);
+                width: 100%;
+                text-align: center;
+                margin: var(--space3) 0;
+
+            }
+
+            .tcFormOptions{
+                display: flex;
+                justify-content: space-between;
+
+                .tcCheckbox{
+                     display: flex;
+                     align-items: center;
+                     gap: var(--space1);
+                    
+                     input{
+                        border: 1px var(--colorThemePrimary);
+                     }
+                }
+            }
+        }
+
+        .tcCardFooter{
+            text-align: center;
+        }
+
+        a{
+           text-decoration: none;
+           color: var(--colorThemePrimary);
+           font-weight: bold;
+        }
+    }
+}
