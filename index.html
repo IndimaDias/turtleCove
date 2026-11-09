@@ -19,7 +19,7 @@
 
             <p class="tcWelcomeText"> Sign in to access your personalised island of features </p>
             <p class="tcWelcomeText"> New here? 
-                 <a href="/inProgrssPage">Register</a> 
+                 <a href="inprogress.html">Register</a> 
                  to explore endless possibilites</p>
         
             <p >Your adventure awaits - dive in!</p>
@@ -34,23 +34,29 @@
             <div class="tcSocialSignIn">
                 <button id="btn-google" type="button" class="tcButton">
                     <img class="tcIconBtn" src="images/SocialMedia-Google.svg" alt="">
-                    With Google
+                      <span class="tcLabel">
+                           <span class="tcLabelLarge">Sign in </span><span class="tcLabelMobile">With </span> Google
+                       </span>
                 </button>
                 <button id="btn-facebook" type="button" class="tcButton">
                     <img class="tcIconBtn" src="images/SocialMedia-Facebook.svg" alt="">
-                    With Facebook
+                        <span class="tcLabel">
+                           <span class="tcLabelLarge">Sign in </span><span class="tcLabelMobile">With </span> Facebook
+                       </span>
                 </button>
             </div>
             <p class="tcDivider">or</p>
 
-            <form class="tcSignInForm" id="sign-in-form" action="/sign-in" method="post" novalidate>
+            <form class="tcSignInForm" id="sign-in-form" novalidate >
                 <div class="tcField">
                     <label for="username">Username</label>
-                    <input type="text" id="username" required name="username" autocomplete="username">
+                    <input type="text" id="username" name="username" autocomplete="username" required aria-describedby="username-error">
+                    <p class="field__error" id="username-error" hidden=""></p>
                 </div>
                 <div class="tcField">
                     <label for="password">Password</label>
-                    <input type="text" id="password" required name="password" autocomplete="current-password">
+                    <input type="text" id="password" required name="password" autocomplete="current-password" aria-describedby="password-error">
+                    <p class="field__error" id="password-error" hidden></p>
                 </div>
 
                 <button type="submit" class="tcButton btnSignIn">Sign In</button>
@@ -60,16 +66,18 @@
                         <input type="checkbox" id="chk-remember" name="remember">
                         <label for="chk-remember">Remember me</label>
                     </div>
-                    <a href="/forgot-password">Forgot Password</a>
+                    <a href="inprogress.html">Forgot Password</a>
            
                 </div>
             </form>
             <div class="tcCardFooter">
                 <p>
-                    Don’t already have an account?  &nbsp; <a href="/register"> Register </a> </p>
+                    Don’t already have an account?  &nbsp; <a href="inprogress.html"> Register </a> </p>
             </div>
         </section>
 
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

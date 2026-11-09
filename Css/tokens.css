@@ -1,51 +1,59 @@
-:root{
-    --colorTextDefault: #535353;
-    --colorTextInverse: #FFFFFF;
-    --colorTextLink: #1272E4;
-    --colorBackgroundDefault: #FFFFFF;
-    --colorBackgroundShaded: #F1F1F1;
+:root {
+  --colorTextDefault: #535353;
+  --colorTextInverse: #ffffff;
+  --colorTextLink: #1272e4;
+  --colorBackgroundDefault: #ffffff;
+  --colorBackgroundShaded: #f1f1f1;
 
-    --colorThemePrimary: #1272E4;
-    --colorBorder: #D7D7D7;
-    --colorBorderHover: #9D9D9D;
+  --colorThemePrimary: #1272e4;
+  --colorBorder: #d7d7d7;
+  --colorBorderHover: #9d9d9d;
 
-    --borderRadiusSmall: 4px;
-    --borderRadiusMedium: 6px;
-    --borderRadiusLarge: 8px;
+  --borderRadiusSmall: 4px;
+  --borderRadiusMedium: 6px;
+  --borderRadiusLarge: 8px;
 
-    --heroBandHeight: 100%; 
-    --sceneSize: 340px;
+  --heroBandHeight: 100%;
+  --sceneSize: 340px;
 
-    --colorHeroStart: #0164DC;
-    --colorHeroEnd:   #01A2FF;
-    --colorSceneSky:  #1da3ff;       /* rgba(29,163,255,1) */
-    --colorSceneSkyFade: #39afff00;   /* rgba(57,175,255,0) */
-    --colorSceneSand: #FFF8BA;   
-      
+  --colorHeroStart: #0164dc;
+  --colorHeroEnd: #01a2ff;
+  --colorSceneSky: #1da3ff; /* rgba(29,163,255,1) */
+  --colorSceneSkyFade: #39afff00; /* rgba(57,175,255,0) */
+  --colorSceneSand: #fff8ba;
 
-    --fontFamilyDisplay: "Bubblegum Sans", "Comic Sans MS", system-ui, sans-serif;
-    --fontFamilyBody: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --fontSizeH1:68px;
-    --fontSizeLargeH1 : 76px;
-    --fontSize2:24px;
-    --fontSizeBody:16px;
+  --fontFamilyDisplay: "Bubblegum Sans", "Comic Sans MS", system-ui, sans-serif;
+  --fontFamilyBody: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fontSizeH1: 68px;
+  --fontSizeLargeH1: 76px;
+  --fontSize2: 24px;
+  --fontSizeBody: 16px;
 
-    --space1 : 8px;
-    --space2 : 12px;
-    --space3 : 16px;
-    --space4 : 24px;
-    --space5 : 48px;
-    --space6 : 52px;
+  --space1: 8px;
+  --space2: 12px;
+  --space3: 16px;
+  --space4: 24px;
+  --space5: 48px;
+  --space6: 52px;
 
-    --sizeButton : 52px;
+  --sizeButton: 52px;
 
-    --formBorderRadious : 10px;
+  --formBorderRadious: 10px;
 
-    --inputBorder : 1px solid var(--colorBorder);
+  --inputBorder: 1px solid var(--colorBorder);
 
-    --shadowCard: 0 4px 16px rgb(0 0 0 / 0.12);
+  --shadowCard: 0 4px 16px rgb(0 0 0 / 0.12);
+
+  --colorError: #c62828;
 }
 
-
-@media (min-width: 768px)  { :root { --heroBandHeight: 684px; } }
-@media (min-width: 1600px) { :root { --heroBandHeight: 914px; } }
+@media (min-width: 768px) {
+  :root {
+    --heroBandHeight: 684px;
+  }
+}
+@media (min-width: 1600px) {
+  :root {
+    --heroBandHeight: 914px;
+  }
+}

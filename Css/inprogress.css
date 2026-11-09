@@ -1,0 +1,31 @@
+@import url(tokens.css);
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--colorThemePrimary);
+}
+
+main {
+  margin: 25%;
+  text-align: center;
+
+  h1 {
+    font-family: var(--fontFamilyDisplay);
+    font-size: var(--fontSizeH1);
+    color: var(--colorTextInverse);
+    line-height: 68px;
+    margin-bottom: 48px;
+  }
+
+  p {
+    font-family: var(--fontFamilyDisplay);
+    font-size: var(--fontSize2);
+    color: var(--colorTextInverse);
+    line-height: 28px;
+    margin-top: 44px;
+  }
+
+  a {
+    color: var(--colorTextInverse);
+  }
+}

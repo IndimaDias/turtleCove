@@ -157,6 +157,12 @@ p {
         width: max-content;
         display: inline-flex;
         align-items: center;
+
+        .tcLabel {
+          .tcLabelLarge {
+            display: none;
+          }
+        }
       }
     }
 
@@ -181,13 +187,21 @@ p {
     form {
       margin-bottom: var(--space6);
       .tcField {
+        margin-bottom: var(--space3);
         input {
           width: 100%;
           line-height: var(--space5);
           border-radius: var(--borderRadiusMedium);
           border: var(--inputBorder);
           margin-top: var(--space1);
-          margin-bottom: var(--space3);
+
+          &:hover {
+            border-color: var(--colorBorderHover);
+          }
+
+          &:focus-visible {
+            border-color: var(--colorBorderHover);
+          }
         }
       }
 
@@ -227,6 +241,38 @@ p {
   }
 }
 
+.field__error {
+  display: flex;
+  align-items: center;
+  gap: var(--space1);
+  margin-top: var(--space1);
+  color: var(--colorError);
+  font-size: 0.875rem;
+}
+
+.field__error::before {
+  content: "!";
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--colorError);
+  color: var(--colorTextInverse);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.field__error[hidden] {
+  display: none;
+}
+
+.tcField input[aria-invalid="true"] {
+  border-color: var(--colorError);
+  border-width: 2px;
+}
+
 /* Large desktop  */
 @media (min-width: 1600px) {
   .tcWelcomePage {
@@ -249,6 +295,12 @@ p {
       min-height: 740px;
       display: flex;
       flex-direction: column;
+
+      .tcLabel {
+        .tcLabelLarge {
+          display: block;
+        }
+      }
     }
   }
 
@@ -341,6 +393,13 @@ p {
         button {
           width: 100%;
           justify-content: center;
+
+          .tcLabel {
+            .tcLabelLarge,
+            .tcLabelMobile {
+              display: none;
+            }
+          }
         }
       }
     }
