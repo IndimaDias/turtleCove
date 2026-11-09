@@ -15,7 +15,7 @@
 
     --heroBandHeight: 100%; 
     --sceneSize: 340px;
-    
+
     --colorHeroStart: #0164DC;
     --colorHeroEnd:   #01A2FF;
     --colorSceneSky:  #1da3ff;       /* rgba(29,163,255,1) */
@@ -26,6 +26,7 @@
     --fontFamilyDisplay: "Bubblegum Sans", "Comic Sans MS", system-ui, sans-serif;
     --fontFamilyBody: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
     --fontSizeH1:68px;
+    --fontSizeLargeH1 : 76px;
     --fontSize2:24px;
     --fontSizeBody:16px;
 
