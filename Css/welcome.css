@@ -315,6 +315,11 @@ p {
       display: flex;
       flex-direction: column;
 
+      .tcSocialSignIn {
+        justify-content: flex-start; /* buttons start from the left */
+        gap: var(--space5); /* 48px between them, as in the mockup */
+      }
+
       .tcLabel {
         .tcLabelLarge {
           display: block;
