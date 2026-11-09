@@ -22,6 +22,25 @@ p {
   margin: 0;
 }
 
+.tcButton {
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.tcButton:hover {
+  filter: brightness(0.93);
+}
+
+.tcButton:focus-visible,
+.tcWelcomePage a:focus-visible {
+  outline: 2px solid var(--colorThemePrimary);
+  outline-offset: 2px;
+}
+
+.tcWelcomePage .tcCard a:hover {
+  text-decoration: underline;
+}
+
 .tcIntro {
   justify-self: start;
   width: fit-content;
@@ -270,7 +289,7 @@ p {
 
 .tcField input[aria-invalid="true"] {
   border-color: var(--colorError);
-  border-width: 2px;
+  box-shadow: 0 0 0 1px var(--colorError);
 }
 
 /* Large desktop  */
@@ -407,4 +426,17 @@ p {
 }
 /* tablet  */
 @media (min-width: 768px) and (max-width: 1099px) {
+  .tcWelcomePage {
+    grid-template-columns: 1fr minmax(320px, 380px);
+    margin-inline: 40px;
+    column-gap: 32px;
+
+    .tcCard {
+      padding: 40px 24px;
+
+      .tcSocialSignIn button .tcLabel .tcLabelMobile {
+        display: none;
+      }
+    }
+  }
 }
